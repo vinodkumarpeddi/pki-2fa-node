@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pki-2fa-app
+    ports:
+      - "8080:8080"
+    environment:
+      TZ: "UTC"
+      DATA_DIR: "/data"
+      PORT: "8080"
+      STUDENT_PRIVATE_KEY_PATH: "/app/student_private.pem"
+    volumes:
+      - seed-data:/data
+      - cron-output:/cron
+    restart: unless-stopped
+
+volumes:
+  seed-data:
+  cron-output:

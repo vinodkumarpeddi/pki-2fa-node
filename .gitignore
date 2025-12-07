@@ -1,0 +1,19 @@
+# Encrypted seed (sensitive)
+encrypted_seed.txt
+
+# Node things
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Env
+.env
+
+# Local dev dirs (Docker will use named volumes)
+data/
+cron_output/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
