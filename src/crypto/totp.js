@@ -5,8 +5,8 @@ import { authenticator } from 'otplib';
 authenticator.options = {
   step: 30,
   digits: 6,
-  algorithm: 'sha1',  // 👈 already fixed to lowercase
-  window: 1           // 👈 ±1 time-step tolerance
+  algorithm: 'sha1',  
+  window: 1           
 };
 
 // RFC 4648 base32 alphabet
